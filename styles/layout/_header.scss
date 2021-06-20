@@ -1,0 +1,92 @@
+#home {
+    margin-top: 10rem;
+   margin-bottom: 20rem;
+   height: 60vh;
+
+    .header__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 150rem;
+        margin: auto;
+
+        .header-box {
+            background: #F89B1C;
+            width: 115rem;
+            padding: 7rem;
+            border-radius: 1rem;
+            -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+
+            .header-inner-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 100rem;
+                margin: auto;
+
+                .header__text {
+                    
+
+                    .intro-txt {
+                        width: 100%;
+                        color: white;
+                        margin-bottom: 2rem;
+                        font-size: 5rem;
+                        margin-top: 3rem;
+                    }
+
+                    .intro-description {
+                        color: #3E3D3D;
+                        font-size: 1.6rem;
+                        width: 92%;
+                        margin-bottom: 4rem;
+                    }
+
+                    .order-now {
+                        padding: 2rem 4rem;
+                        border: none;
+                        background: #A6CE39;
+                        border-radius: .5rem;
+                        font-size: 1.8rem;
+                        font-family: 'Poppins', sans-serif;
+                        color: white;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+
+                    .order-now:hover {
+                        background: #97bb33;
+                        transition: 0.3s ease-in;
+                    }
+                }
+
+                img {
+                    height: 23rem;
+                }
+            }
+
+            .header__jump-btn {
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 10rem;
+                cursor: pointer;
+
+                .fa-arrow-down {
+                    background: #A6CE39;
+                    padding: 2rem;
+                    border-radius: 50%;
+                    font-size: 2rem;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+}

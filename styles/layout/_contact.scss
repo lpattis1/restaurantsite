@@ -1,0 +1,49 @@
+#contact {
+  margin-top: 10rem;
+
+  .contact__banner {
+    background-image: url(/img/souldfood3.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+  }
+
+  .contact-txt {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+
+    .divider-top {
+      height: 1.5rem;
+      width: 26rem;
+      background: #f89b1c;
+      margin: auto;
+    }
+
+    .contact-text {
+      font-size: 5.5rem;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .divider-bottom {
+      height: 1.5rem;
+      width: 26rem;
+      background: #f89b1c;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+#about {
+  margin-top: 15rem;
+
+  .about__banner {
+    background-image: url(/img/soulfood.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    .about-banner-txt {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+
+      .divider-top {
+        height: 1.5rem;
+        width: 25rem;
+        background: #f89b1c;
+        margin: auto;
+      }
+
+      .banner-heading-text {
+        font-size: 5.5rem;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      .divider-bottom {
+        height: 1.5rem;
+        width: 25rem;
+        background: #f89b1c;
+        margin: auto;
+      }
+    }
+  }
+
+  .about-us {
+    margin-top: 4rem;
+
+    .about-us__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 145rem;
+      margin: auto;
+
+      .about-us__text {
+        opacity: 0;
+      }
+
+      .who-we-are__txt1 {
+        font-size: 1.6rem;
+        width: 90%;
+        margin-bottom: 2rem;
+        
+    }
+
+    .who-we-are__txt2 {
+        font-size: 1.6rem;
+        width: 90%;
+        
+    }
+
+      .who-we-are {
+          font-size: 5rem;
+          color: #f89b1c;
+          margin-bottom: 3rem;
+        
+
+          .emphasis {
+              text-decoration: underline;
+              text-decoration-color: #A6CE39;
+              text-underline-offset: 0.8rem;
+          }
+      }
+
+      .about-us__img img {
+        height: 55rem;
+        opacity: 0;
+        
+      }
+    }
+  }
+}
