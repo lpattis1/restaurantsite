@@ -4,10 +4,6 @@
 const links = document.querySelectorAll(".main-link");
 const jumpLink = document.querySelector(".header__jump-btn");
 
-// Cart
-const cart = document.querySelector(".cart");
-let count = document.querySelector(".count");
-
 // Page Sections
 const sections = document.querySelectorAll(".page-section");
 const topBar = document.querySelector(".top-bar");
@@ -28,12 +24,9 @@ function scrollAnimations() {
         return;
       }
 
-      console.log(section);
-
       for (let i = 0; i < links.length; i++) {
         let linkName = links[i].classList[2];
-        console.log(linkName);
-        console.log(section.target.id);
+
         if (linkName === section.target.id) {
           links[i].classList.add("link-section");
         } else {
@@ -82,3 +75,119 @@ function scrollAnimations() {
 scrollAnimations();
 
 // --------------------------------------
+
+// Hover for sub categories function
+
+function hoverToDisplaySubCategories() {
+  // Variables:
+
+  // Item Categories
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach((category) => {
+    category.addEventListener("click", function (e) {
+      console.log(category.nextElementSibling);
+      category.nextElementSibling.classList.add("hovered-show");
+    });
+
+    category.nextElementSibling.addEventListener("mouseleave", function (e) {
+      console.log(category.nextElementSibling);
+      category.nextElementSibling.classList.remove("hovered-show");
+    });
+  });
+}
+
+// Sort menu items
+
+function sortMenuItemsGeneral() {
+  // Variables:
+
+  // Item Categories
+  const categories = document.querySelectorAll(".category");
+  const menuItems = document.querySelectorAll(".item");
+  const menuTitles = document.querySelectorAll(".food-title");
+  const sections = document.querySelectorAll(".section");
+
+  categories.forEach((category) => {
+    category.addEventListener("click", function (e) {
+      let categoryType = category.dataset.category;
+
+      for (let i = 0; i < menuItems.length; i++) {
+        if (!menuItems[i].classList.contains(categoryType)) {
+          menuItems[i].classList.add("hide-item");
+        } else {
+          menuItems[i].classList.remove("hide-item");
+        }
+      }
+
+      for (let i = 0; i < menuTitles.length; i++) {
+        if (menuTitles[i].textContent.toLowerCase() !== categoryType) {
+          menuTitles[i].classList.add("hide-item");
+        } else {
+          menuTitles[i].classList.remove("hide-item");
+        }
+      }
+
+      for (let i = 0; i < sections.length; i++) {
+        if (sections[i].firstElementChild.classList.contains("hide-item")) {
+          sections[i].classList.add("hide-item");
+        } else {
+          sections[i].classList.remove("hide-item");
+        }
+      }
+    });
+  });
+}
+
+function sortMenuItemsSpecific() {
+  // Variables:
+
+  // Item Categories
+  const categories = document.querySelectorAll(".category");
+  const menuItems = document.querySelectorAll(".item");
+  const hoveredItems = document.querySelectorAll(".hovered-item");
+
+  hoveredItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      let specificCategory = item.dataset.hovered;
+
+      for (let i = 0; i < menuItems.length; i++) {
+        if (!menuItems[i].classList.contains(specificCategory)) {
+          menuItems[i].classList.add("hide-item");
+        } else {
+          menuItems[i].classList.remove("hide-item");
+        }
+      }
+    });
+  });
+}
+
+hoverToDisplaySubCategories();
+sortMenuItemsGeneral();
+sortMenuItemsSpecific();
+
+// Add items function
+
+function addItemsToCart() {
+  // Variables:
+
+  // Cart
+  const cart = document.querySelector(".cart");
+  let count = document.querySelector(".count");
+  let itemsAdded = 0;
+
+  // Item Categories
+  const categories = document.querySelectorAll(".category");
+  const hoveredCategories = document.querySelectorAll(".hovered-category");
+
+  // Buttons
+  const orderNowBtns = document.querySelectorAll(".order-btn");
+
+  // Items
+  const items = document.querySelectorAll(".item");
+
+  // Item names
+  const itemNames = document.querySelectorAll(".item-name");
+
+  //   ---------------------------------
+}

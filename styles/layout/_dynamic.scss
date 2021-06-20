@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   width: 100%;
- z-index: 1000;
+  z-index: 1000;
 }
 
 .navbar.fixed-nav {
@@ -24,7 +24,7 @@
   z-index: 1000;
   padding-bottom: 0;
   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
-                    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 .link-section {
@@ -33,6 +33,7 @@
   text-decoration-thickness: 0.2em;
   text-underline-offset: 0.4rem;
   transition: 0.2s ease-in-out;
+  color: #f89b1c !important;
 }
 
 // menu
@@ -49,5 +50,12 @@
 
 .display {
   opacity: 1 !important;
- transition: 0.6s ease-in;
+  transition: 0.6s ease-in;
+}
+
+// menu items
+
+.hide-item {
+ 
+  display: none !important;
 }

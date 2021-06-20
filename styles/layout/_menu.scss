@@ -80,14 +80,15 @@
         opacity: 0;
       }
 
-      .hovered-category a {
+      .hovered-category p {
         font-size: 1.5rem;
         color: #f89b1c;
         font-weight: 500;
         margin-bottom: 0.8rem;
+        cursor: pointer;
       }
 
-      .hovered-category a:hover {
+      .hovered-category p:hover {
         transition: 0.3s ease-in;
         color: #a6ce39;
       }
@@ -108,7 +109,7 @@
         }
 
         .category {
-          padding: 1.9rem 4rem;
+          padding: 2rem 4rem;
           margin-right: 3rem;
           border-top-right-radius: 1rem;
           border-top-left-radius: 1rem;
@@ -232,6 +233,24 @@
       }
   
       .row-two {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: end;
+        align-items: center;
+        margin-top: 4rem;
+        grid-gap: 3rem;
+      }
+
+      .row-three {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: end;
+        align-items: center;
+        margin-top: 4rem;
+        grid-gap: 3rem;
+      }
+
+      .row-four {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: end;

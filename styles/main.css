@@ -183,6 +183,7 @@ li {
   text-decoration-thickness: 0.2em;
   text-underline-offset: 0.4rem;
   transition: 0.2s ease-in-out;
+  color: #f89b1c !important;
 }
 
 .hovered-show {
@@ -199,6 +200,10 @@ li {
 .display {
   opacity: 1 !important;
   transition: 0.6s ease-in;
+}
+
+.hide-item {
+  display: none !important;
 }
 
 #home {
@@ -355,13 +360,14 @@ li {
   visibility: hidden;
   opacity: 0;
 }
-#menu .menu-categories .categories-container .hovered-category a {
+#menu .menu-categories .categories-container .hovered-category p {
   font-size: 1.5rem;
   color: #f89b1c;
   font-weight: 500;
   margin-bottom: 0.8rem;
+  cursor: pointer;
 }
-#menu .menu-categories .categories-container .hovered-category a:hover {
+#menu .menu-categories .categories-container .hovered-category p:hover {
   transition: 0.3s ease-in;
   color: #a6ce39;
 }
@@ -379,7 +385,7 @@ li {
   position: relative;
 }
 #menu .menu-categories .categories-container .categories .category {
-  padding: 1.9rem 4rem;
+  padding: 2rem 4rem;
   margin-right: 3rem;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
@@ -489,6 +495,22 @@ li {
   grid-gap: 3rem;
 }
 .menu-items .section-two .row-two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+  align-items: center;
+  margin-top: 4rem;
+  grid-gap: 3rem;
+}
+.menu-items .section-two .row-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+  align-items: center;
+  margin-top: 4rem;
+  grid-gap: 3rem;
+}
+.menu-items .section-two .row-four {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
@@ -775,6 +797,202 @@ li {
 .menu-items .section-five .item .food-pic {
   height: 13rem;
   margin-bottom: 5rem;
+}
+
+.cart-modal-bg {
+  background: rgba(0, 0, 0, 0.171);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.cart-modal-bg .cart-modal {
+  background: white;
+  width: 50%;
+  position: relative;
+  transition: 0.3s ease-in;
+}
+.cart-modal-bg .cart-modal .cart-modal-close {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  z-index: 3000;
+  cursor: pointer;
+}
+.cart-modal-bg .cart-modal .cart-modal-close .fa-times-circle {
+  font-size: 3rem;
+  color: white;
+}
+.cart-modal-bg .cart-modal .summary .cart-sum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background: #a6ce39;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.cart-modal-bg .cart-modal .summary .cart-sum .cart-title {
+  color: white;
+  font-size: 3rem;
+}
+.cart-modal-bg .cart-modal .bag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart-modal-bg .cart-modal .bag .bag-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.cart-modal-bg .cart-modal .bag .orders {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.cart-modal-bg .cart-modal .bag .orders li {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cart-modal-bg .cart-modal .bag .orders li img {
+  height: 10rem;
+  object-fit: contain;
+}
+.cart-modal-bg .cart-modal .bag .bag-divider {
+  height: 0.2rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.13);
+}
+.cart-modal-bg .cart-modal .checkout-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.cart-modal-bg .cart-modal .checkout-price .checkout-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.cart-modal-bg .cart-modal .checkout-price .total-price {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.cart-modal-bg .cart-modal .checkout-price .total-price .total-number {
+  font-weight: 600;
+  color: #f89b1c;
+}
+.cart-modal-bg .cart-modal .checkout-price .total-divider {
+  height: 0.2rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.13);
+}
+.cart-modal-bg .cart-modal .enter-details-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form input {
+  width: 50rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .name-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .name-area label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .name-area .details-name {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .email-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .email-area label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .email-area .details-email {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area .details-payment-card {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area .details-payment-cvc {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area .details-payment-zip {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .checkout-btn {
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  border-radius: 0.5rem;
+  background: #f89b1c;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.cart-modal-bg .cart-modal .order-complete-page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f89b1c;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  transform: translateX(200%);
 }
 
 .top-bar {
