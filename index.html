@@ -38,11 +38,6 @@
             <div class="bag">
               <h3 class="bag-title">Bag</h3>
               <ul class="orders">
-                <li><img src="/img/bbqburger.png" alt=""> gfgf</li>
-                <li><img src="/img/chickenshawarma.png" alt=""> gfgf</li>
-                <li><img src="/img/coleslaw.png" alt=""> gfgf</li>
-                
-             
               </ul>
               <div class="bag-divider"></div>
             </div>
@@ -121,7 +116,7 @@
           <li class="link link-cart">
             <a class="list-link" href=""
               >Cart
-              <img src="/img/shopping-cart.svg" alt="" class="cart" /><span
+              <img src="/img/shopping-cart.svg" alt="" class="cart" /><span data-value="0"
                 class="count"
                 >0</span
               ></a
@@ -207,7 +202,10 @@
        <div class="categories-container">
         <h2 class="selections">Our Selections</h2>
         <div class="categories">
-          <div class="category-one">
+          <div class="all">
+            <button class="all-btn">All</button>
+          </div>
+          <div data-category="item" class="category-one">
             <button data-category="seafood" class="category">Seafood</button>
           <div class="hovered-category">
             <p data-hovered="shrimp" class="hovered-item">Shrimp</p>
@@ -538,5 +536,6 @@
     </section>
 
     <script src="/app.js"></script>
+    <script src="/cart.js"></script>
   </body>
 </html>

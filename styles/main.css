@@ -206,6 +206,10 @@ li {
   display: none !important;
 }
 
+.show-modal {
+  display: flex !important;
+}
+
 #home {
   margin-top: 10rem;
   margin-bottom: 20rem;
@@ -359,6 +363,18 @@ li {
   transition: 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
+}
+#menu .menu-categories .categories-container .all-btn {
+  padding: 2rem 4rem;
+  margin-right: 3rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border: none;
+  background: #a6ce39;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: white;
 }
 #menu .menu-categories .categories-container .hovered-category p {
   font-size: 1.5rem;
@@ -811,6 +827,7 @@ li {
   align-items: center;
   justify-content: center;
   display: none;
+  transition: all 0.3s ease-in-out;
 }
 .cart-modal-bg .cart-modal {
   background: white;
@@ -870,6 +887,7 @@ li {
 .cart-modal-bg .cart-modal .bag .orders li img {
   height: 10rem;
   object-fit: contain;
+  cursor: pointer;
 }
 .cart-modal-bg .cart-modal .bag .bag-divider {
   height: 0.2rem;

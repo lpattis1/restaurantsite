@@ -18,7 +18,7 @@ const contact = document.querySelector("#contact");
 // Intersection Observer
 
 function scrollAnimations() {
-  const observer = new IntersectionObserver(function (sections, observer) {
+  const observer = new IntersectionObserver(function (sections, options) {
     sections.forEach((section) => {
       if (!section.isIntersecting) {
         return;
@@ -67,6 +67,7 @@ function scrollAnimations() {
     });
   });
 
+  //   What to observe
   sections.forEach((section) => {
     observer.observe(section);
   });
@@ -97,7 +98,7 @@ function hoverToDisplaySubCategories() {
   });
 }
 
-// Sort menu items
+// Sort menu items - main and sub menus
 
 function sortMenuItemsGeneral() {
   // Variables:
@@ -107,6 +108,7 @@ function sortMenuItemsGeneral() {
   const menuItems = document.querySelectorAll(".item");
   const menuTitles = document.querySelectorAll(".food-title");
   const sections = document.querySelectorAll(".section");
+  const allCategory = document.querySelector(".all-btn");
 
   categories.forEach((category) => {
     category.addEventListener("click", function (e) {
@@ -115,8 +117,14 @@ function sortMenuItemsGeneral() {
       for (let i = 0; i < menuItems.length; i++) {
         if (!menuItems[i].classList.contains(categoryType)) {
           menuItems[i].classList.add("hide-item");
+          menuItems[i].animate([{ opacity: "0.5" }, { opacity: "1" }], {
+            duration: 1000,
+          });
         } else {
           menuItems[i].classList.remove("hide-item");
+          menuItems[i].animate([{ opacity: "0.5" }, { opacity: "1" }], {
+            duration: 1000,
+          });
         }
       }
 
@@ -131,8 +139,32 @@ function sortMenuItemsGeneral() {
       for (let i = 0; i < sections.length; i++) {
         if (sections[i].firstElementChild.classList.contains("hide-item")) {
           sections[i].classList.add("hide-item");
+          sections[i].animate([{ opacity: "0.5" }, { opacity: "1" }], {
+            duration: 1000,
+          });
         } else {
           sections[i].classList.remove("hide-item");
+          sections[i].animate([{ opacity: "0.5" }, { opacity: "1" }], {
+            duration: 1000,
+          });
+        }
+      }
+    });
+
+    allCategory.addEventListener("click", function (e) {
+      for (let i = 0; i < menuItems.length; i++) {
+        if (allCategory) {
+          menuItems[i].classList.remove("hide-item");
+          menuItems[i].animate([{ opacity: "0.5" }, { opacity: "1" }], {
+            duration: 1000,
+          });
+          sections.forEach((section) => {
+            section.classList.remove("hide-item");
+          });
+
+          menuTitles.forEach((title) => {
+            title.classList.remove("hide-item");
+          });
         }
       }
     });
@@ -154,8 +186,14 @@ function sortMenuItemsSpecific() {
       for (let i = 0; i < menuItems.length; i++) {
         if (!menuItems[i].classList.contains(specificCategory)) {
           menuItems[i].classList.add("hide-item");
+          menuItems[i].animate([{ opacity: "0.5" }, { opacity: "1" }], {
+            duration: 1000,
+          });
         } else {
           menuItems[i].classList.remove("hide-item");
+          menuItems[i].animate([{ opacity: "0.5" }, { opacity: "1" }], {
+            duration: 1000,
+          });
         }
       }
     });
@@ -167,27 +205,3 @@ sortMenuItemsGeneral();
 sortMenuItemsSpecific();
 
 // Add items function
-
-function addItemsToCart() {
-  // Variables:
-
-  // Cart
-  const cart = document.querySelector(".cart");
-  let count = document.querySelector(".count");
-  let itemsAdded = 0;
-
-  // Item Categories
-  const categories = document.querySelectorAll(".category");
-  const hoveredCategories = document.querySelectorAll(".hovered-category");
-
-  // Buttons
-  const orderNowBtns = document.querySelectorAll(".order-btn");
-
-  // Items
-  const items = document.querySelectorAll(".item");
-
-  // Item names
-  const itemNames = document.querySelectorAll(".item-name");
-
-  //   ---------------------------------
-}

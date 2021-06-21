@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   display: none;
+  transition: all 0.3s ease-in-out;
 
   .cart-modal {
     background: white;
@@ -78,6 +79,7 @@
       .orders li img {
         height: 10rem;
         object-fit: contain;
+        cursor: pointer;
       }
 
       .bag-divider {
