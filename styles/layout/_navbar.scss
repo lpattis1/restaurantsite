@@ -90,6 +90,7 @@
                     position: relative;
                     display: flex;
                     align-items: center;
+                    cursor: pointer;
 
                     .cart {
                         background: #A6CE39;
@@ -97,6 +98,7 @@
                         margin-left: 1rem;
                         border-radius: .5rem;
                         height: 4rem;
+                        cursor: pointer;
                     }
 
                     .count {

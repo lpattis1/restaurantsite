@@ -197,6 +197,10 @@ li {
   transition: 0.3s ease-in-out !important;
 }
 
+.slide-out {
+  transform: translateX(-200%) !important;
+}
+
 .display {
   opacity: 1 !important;
   transition: 0.6s ease-in;
@@ -208,6 +212,10 @@ li {
 
 .show-modal {
   display: flex !important;
+}
+
+.show-alert {
+  display: block !important;
 }
 
 #home {
@@ -486,6 +494,10 @@ li {
   font-weight: 600;
   cursor: pointer;
 }
+.menu-items .section-one .item .order-btn:hover {
+  background: #ec961c;
+  transition: 0.3s ease-in-out;
+}
 .menu-items .section-one .item .food-pic {
   height: 13rem;
   margin-bottom: 5rem;
@@ -579,6 +591,10 @@ li {
   font-weight: 600;
   cursor: pointer;
 }
+.menu-items .section-two .item .order-btn:hover {
+  background: #ec961c;
+  transition: 0.3s ease-in-out;
+}
 .menu-items .section-two .item .food-pic {
   height: 13rem;
   margin-bottom: 5rem;
@@ -655,6 +671,10 @@ li {
   color: white;
   font-weight: 600;
   cursor: pointer;
+}
+.menu-items .section-three .item .order-btn:hover {
+  background: #ec961c;
+  transition: 0.3s ease-in-out;
 }
 .menu-items .section-three .item .food-pic {
   height: 13rem;
@@ -733,6 +753,10 @@ li {
   font-weight: 600;
   cursor: pointer;
 }
+.menu-items .section-four .item .order-btn:hover {
+  background: #ec961c;
+  transition: 0.3s ease-in-out;
+}
 .menu-items .section-four .item .food-pic {
   height: 13rem;
   margin-bottom: 5rem;
@@ -810,6 +834,10 @@ li {
   font-weight: 600;
   cursor: pointer;
 }
+.menu-items .section-five .item .order-btn:hover {
+  background: #ec961c;
+  transition: 0.3s ease-in-out;
+}
 .menu-items .section-five .item .food-pic {
   height: 13rem;
   margin-bottom: 5rem;
@@ -846,6 +874,9 @@ li {
   font-size: 3rem;
   color: white;
 }
+.cart-modal-bg .cart-modal .summary {
+  transition: 0.3s ease-in-out;
+}
 .cart-modal-bg .cart-modal .summary .cart-sum {
   display: flex;
   justify-content: space-between;
@@ -873,9 +904,10 @@ li {
 }
 .cart-modal-bg .cart-modal .bag .orders {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
   align-items: center;
+  justify-items: center;
   margin-bottom: 3rem;
 }
 .cart-modal-bg .cart-modal .bag .orders li {
@@ -883,11 +915,32 @@ li {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-weight: 600;
 }
 .cart-modal-bg .cart-modal .bag .orders li img {
-  height: 10rem;
+  height: 8rem;
   object-fit: contain;
   cursor: pointer;
+}
+.cart-modal-bg .cart-modal .bag .orders .item-price {
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cart-modal-bg .cart-modal .bag .orders .remove-btn {
+  padding: 1.5rem 0.5rem;
+  width: 9rem;
+  background: #f89b1c;
+  border: none;
+  margin: auto;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 600;
 }
 .cart-modal-bg .cart-modal .bag .bag-divider {
   height: 0.2rem;
@@ -900,6 +953,24 @@ li {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+}
+.cart-modal-bg .cart-modal .checkout-price .to-details-btn {
+  margin-bottom: 3rem;
+  padding: 2rem 4rem;
+  border: none;
+  background: #a6ce39;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 600;
+}
+.cart-modal-bg .cart-modal .checkout-price .amount-alert {
+  color: red;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  display: none;
 }
 .cart-modal-bg .cart-modal .checkout-price .checkout-title {
   font-size: 2.5rem;
@@ -925,6 +996,13 @@ li {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  transition: 0.3s ease-in-out;
+  transform: translateX(200%);
+  position: absolute;
+  padding: 2rem;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .cart-modal-bg .cart-modal .enter-details-page .details-title {
   font-size: 2.5rem;
@@ -1090,6 +1168,7 @@ li {
   position: relative;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .navbar__container .navbar__links .link-cart .list-link .cart {
   background: #A6CE39;
@@ -1097,6 +1176,7 @@ li {
   margin-left: 1rem;
   border-radius: 0.5rem;
   height: 4rem;
+  cursor: pointer;
 }
 .navbar__container .navbar__links .link-cart .list-link .count {
   position: absolute;

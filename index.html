@@ -43,8 +43,9 @@
             </div>
             <div class="checkout-price">
               <h3 class="checkout-title">Total</h3>
-              <p class="total-price">Total price: <span class="total-number">$52.30</span></p>
-              <div class="total-divider"></div>
+              <p class="total-price">Total price: $<span class="total-number">0</span></p>
+              <p class="amount-alert">Please add at least one item to your cart.</p>
+              <button class="to-details-btn">Checkout</button>
             </div>
           </div>
 
@@ -68,7 +69,7 @@
                 <input type="number" class="details-payment-zip" placeholder="Zipcode">
               </div>
 
-              <button class="checkout-btn">Checkout</button>
+              <button class="checkout-btn">Complete Order</button>
             </form>
           </div>
         </div>
@@ -108,18 +109,18 @@
         <div class="hamburger-menu"><i class="fas fa-bars"></i></div>
         <ul class="navbar__links">
           <li class="link">
-            <a class="list-link main-link link-section home" href="">Home</a>
+            <a class="list-link main-link link-section home" href="#home">Home</a>
           </li>
           <li class="link"><a class="list-link main-link about" href="#about">About Us</a></li>
           <li class="link"><a class="list-link main-link menu" href="#menu">Our Menu</a></li>
           <li class="link"><a class="list-link main-link contact" href="#contact">Contact</a></li>
           <li class="link link-cart">
-            <a class="list-link" href=""
+            <p class="list-link"
               >Cart
               <img src="/img/shopping-cart.svg" alt="" class="cart" /><span data-value="0"
                 class="count"
                 >0</span
-              ></a
+              ></p
             >
           </li>
         </ul>
@@ -145,7 +146,7 @@
             </div>
           </div>
           <div class="header__jump-btn">
-            <i class="fas fa-arrow-down"></i>
+            <a href="#menu"><i class="fas fa-arrow-down"></i></a>
           </div>
         </div>
       </div>
@@ -251,23 +252,23 @@
          <div class="row-one">
           <div class="item seafood fish">
             <img src="/img/fishandchips.png" alt="" class="food-pic">
-            <h3 data-price="13" class="item-name">Fried Fish Plate</h3>
+            <h3 data-price="13.52" class="item-name">Fried Fish Plate</h3>
             <p class="item-description">Crispy on the outside, tender and delicious on the inside. Fresh tilapia fillets golden fried or grilled. Served with fries, slaw and homemade tartar sauce.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
 
           <div class="item seafood fish">
             <img src="/img/fishtaco.png" alt="" class="food-pic">
-            <h3 data-price="11" class="item-name">Fish Tacos</h3>
+            <h3 data-price="11.99" class="item-name">Fish Tacos</h3>
             <p class="item-description">Tilapia, grilled or fried, topped with POE Sauce, salsa fresca and slaw. Served on warm tortillas, with a side of black beans and rice. Flour or corn (GF) tortillas.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
 
           <div class="item seafood shrimp">
             <img src="/img/shrimptaco.png" alt="" class="food-pic">
-            <h3 data-price="8" class="item-name">Shrimp Tacos</h3>
+            <h3 data-price="8.12" class="item-name">Shrimp Tacos</h3>
             <p class="item-description">Shrimp, grilled or fried, topped with POE Sauce, salsa fresca and slaw. Served on warm tortillas, with a side of black beans and rice. Flour or corn (GF) tortillas.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
          </div>
 
@@ -276,21 +277,21 @@
             <img src="/img/shrimpandgrits.png" alt="" class="food-pic">
             <h3 data-price="9" class="item-name">Shrimp & Grits</h3>
             <p class="item-description">Perfectly cooked grits mixed with white cheddar, asiago, and cream cheese. Topped with shrimp, spicy sausage, red & green bell peppers, & onions.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
 
           <div class="item seafood shrimp">
             <img src="/img/shrimppplate.png" alt="" class="food-pic">
             <h3 data-price="10" class="item-name">Shrimp Plate</h3>
             <p class="item-description">Juicy shrimp grilled or fried to perfection. Served with fresh cut fries, slaw and homemade tartar sauce.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
 
           <div class="item seafood shrimp">
             <img src="/img/shrimppasta.png" alt="" class="food-pic">
             <h3 data-price="11" class="item-name">Shrimp Pasta</h3>
             <p class="item-description">Delicious grilled shrimp marinated in our homemade lemon sauce. Topped with fresh alfredo sauce and pasta.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
         </div>
           </section>
@@ -306,21 +307,21 @@
             <img src="/img/hotwings.png" alt="" class="food-pic">
             <h3 data-price="7" class="item-name">Hot Wings Plate</h3>
             <p class="item-description">Crispy fried chicken wings tossed in a savory, spicy, and sweet sauce. Served with fresh-cut french fries, bread, and ranch sauce.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
   
           <div class="item meat chicken">
             <img src="/img/chickenandwaffles.png" alt="" class="food-pic">
             <h3 data-price="13" class="item-name">Chicken & Waffles</h3>
             <p class="item-description">Belgian waffles with deep pockets to fill with our homemade syrup, fruit toppings (blueberries or strawberries +1.50) and topped with 6 golden fried chicken wings.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
   
           <div class="item meat chicken">
             <img src="/img/friedchicken.png" alt="" class="food-pic">
             <h3 data-price="8" class="item-name">Chicken Plate</h3>
             <p class="item-description">Crispy on the outside, tender and delicious on the inside. Chicken wings flavorfully golden fried and served with fries, slaw and bread.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
         </div>
 
@@ -329,21 +330,21 @@
           <img src="/img/chickensteak.png" alt="" class="food-pic">
           <h3 data-price="10" class="item-name">Chicken Steak</h3>
           <p class="item-description">A true Southern comfort. The chicken steak plate comes with our homemade gravy and breaded chicken.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
 
         <div class="item meat chicken">
           <img src="/img/shrimppplate.png" alt="" class="food-pic">
           <h3 data-price="7" class="item-name">Chicken Nuggets</h3>
           <p class="item-description">A 6 or 9 piece serving of our chicken nuggets. Comes with our famous, homebrewed dipping sauce.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
 
         <div class="item meat chicken">
           <img src="/img/shrimppasta.png" alt="" class="food-pic">
           <h3 data-price="14" class="item-name">Chicken Shawarma</h3>
           <p class="item-description">Chicken cut into thin slices, stacked in a cone-like shape, and roasted on our slowly-turning vertical rotisserie</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
        </div>
 
@@ -352,21 +353,21 @@
           <img src="/img/bbqburger.png" alt="" class="food-pic">
           <h3 data-price="14" class="item-name">BBQ Cheeseburger Plate</h3>
           <p class="item-description">Perfectly seasoned beef, covered with cheddar cheese, caramelized onions and our homemade BBQ sauce. Served with fries. Gluten-free bun add 1.50.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
 
         <div class="item meat beef">
           <img src="/img/steakdinner.png" alt="" class="food-pic">
           <h3 data-price="17" class="item-name">Steak Plate</h3>
           <p class="item-description">A classic ribeye with any 2 sides of your choice. We use our homemade sauce and smoke our steaks.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
 
         <div class="item meat beef">
           <img src="/img/cheeseburger.png" alt="" class="food-pic">
           <h3 data-price="11" class="item-name">Cheeseburger Plate</h3>
           <p class="item-description">Seasoned beef with any choice of toppings. Served with fries and your choice of an extra side. Gluten-free bun.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
        </div>
 
@@ -375,21 +376,21 @@
             <img src="/img/ribs.png" alt="" class="food-pic">
             <h3 data-price="12" class="item-name">Ribs Plate</h3>
             <p class="item-description">Tender ribs coated with our homemade BBQ sauce. Comes with any 2 sides of your choice. Not gluten-free.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
   
           <div class="item meat beef">
             <img src="/img/spaghetti.png" alt="" class="food-pic">
             <h3 data-price="12" class="item-name">Meaty Spaghetti</h3>
             <p class="item-description">Fresh beef mixed with a flavorful meat sauce. Comes with an option of parmesean cheese and Gluten-free noodles.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
   
           <div class="item meat beef">
             <img src="/img/meatloaf.png" alt="" class="food-pic">
             <h3 data-price="10" class="item-name">Wrapped Meatloaf</h3>
             <p class="item-description">Our famous “Mama’s Meaty Meatloaf”. Comes topped with cheese and our homemade sauce. Gluten-free for 1.50 extra.</p>
-            <button class="order-btn">Order Now</button>
+            <button class="order-btn">Add to Cart</button>
           </div>
         </div>
       </section>
@@ -402,21 +403,21 @@
         <img src="/img/frenchfries.png" alt="" class="food-pic">
         <h3 data-price="7" class="item-name">French Fries</h3>
         <p class="item-description">Choose from our small, medium, or large steak cut fries that comes seasoned with an amazing blend of spices. Comes with your choice of condiment.</p>
-        <button class="order-btn">Order Now</button>
+        <button class="order-btn">Add to Cart</button>
       </div>
 
       <div class="item sides grits">
         <img src="/img/grits.png" alt="" class="food-pic">
         <h3 data-price="5" class="item-name">Cheese Grits</h3>
         <p class="item-description">Our famous grits blended with a medley of cheeses. Gluten-free is available for an added 1.50.</p>
-        <button class="order-btn">Order Now</button>
+        <button class="order-btn">Add to Cart</button>
       </div>
 
       <div class="item sides veggies">
         <img src="/img/brocolli.png" alt="" class="food-pic">
         <h3 data-price="4" class="item-name">Brocolli</h3>
         <p class="item-description">A healthy, steamed plate of freshly cut brocolli. Comes with an optional dipping sauce and packet of salt.</p>
-        <button class="order-btn">Order Now</button>
+        <button class="order-btn">Add to Cart</button>
       </div>
      </div>
 
@@ -425,21 +426,21 @@
           <img src="/img/coleslaw.png" alt="" class="food-pic">
           <h3 data-price="5" class="item-name">Cole Slaw</h3>
           <p class="item-description">Slaw salad served with finely shredded raw cabbage, mayonaise, and your choice of a salad dressing</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
   
         <div class="item sides rice">
           <img src="/img/spanishrice.png" alt="" class="food-pic">
           <h3 data-price="6" class="item-name">Spanish Rice</h3>
           <p class="item-description">Rice stirred with onions and garlic, simmered in chicken broth with freshly added tomatoes and peas.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
   
         <div class="item sides beans">
           <img src="/img/blackbeans.png" alt="" class="food-pic">
           <h3 data-price="6" class="item-name">Black Beans</h3>
           <p class="item-description">Mama’s delicious black beans come with unique spices that accentuate the flavor and deliver a taste you won’t forget.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
       </div>
      </section>
@@ -452,21 +453,21 @@
           <img src="/img/keylimepie.png" alt="" class="food-pic">
           <h3 data-price="10" class="item-name">Key Lime Pie</h3>
           <p class="item-description">Made with With its outstanding macadamia nut crust, creamy thick lime filling, and sweet whipped cream on top.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
   
         <div class="item desserts pie">
           <img src="/img/peachpie.png" alt="" class="food-pic">
           <h3 data-price="9" class="item-name">Peach Pie</h3>
           <p class="item-description">Made with freshly peeled peaches and a crusty pie base that tastes like heaven. Gluten-free crust is optional.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
   
         <div class="item desserts pie">
           <img src="/img/lemonpie.png" alt="" class="food-pic">
           <h3 data-price="9" class="item-name">Lemon Pie</h3>
           <p class="item-description">Unbelievably creamy lemon pie is just like key lime pie with a lemon twist and toasty almond graham cracker crust. </p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
       </div>
 
@@ -475,21 +476,21 @@
           <img src="/img/pecanicecream.png" alt="" class="food-pic">
           <h3 data-price="8" class="item-name">Pecan Ice Cream</h3>
           <p class="item-description">Smooth and thick vanilla ice cream with a slight buttery flavor,  blended with fresh pecans.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
   
         <div class="item desserts cake">
           <img src="/img/pineapplecake.png" alt="" class="food-pic">
           <h3 data-price="12" class="item-name">Pineapple Cake</h3>
           <p class="item-description">A moist pineapple cake base with freshly whipped frosting and decorative fruit toppings.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
   
         <div class="item desserts pudding">
           <img src="/img/bananapudding.png" alt="" class="food-pic">
           <h3 data-price="7" class="item-name">Banana Pudding</h3>
           <p class="item-description">Consists of layers of vanilla custard with vanilla waifers and sliced bananas topped with whipped cream or meringue.</p>
-          <button class="order-btn">Order Now</button>
+          <button class="order-btn">Add to Cart</button>
         </div>
       </div>
      </section>
@@ -537,5 +538,9 @@
 
     <script src="/app.js"></script>
     <script src="/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        const scroll = new SmoothScroll('a[href*="#"]');
+    </script>
   </body>
 </html>

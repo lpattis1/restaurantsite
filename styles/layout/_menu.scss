@@ -215,6 +215,12 @@
         color: white;
         font-weight: 600;
         cursor: pointer;
+       
+      }
+
+      .order-btn:hover {
+        background: #ec961c;
+        transition: 0.3s ease-in-out;
       }
 
       .food-pic {
@@ -320,6 +326,11 @@
           font-weight: 600;
           cursor: pointer;
         }
+
+        .order-btn:hover {
+          background: #ec961c;
+          transition: 0.3s ease-in-out;
+        }
   
         .food-pic {
           height: 13rem;
@@ -406,6 +417,11 @@
           color: white;
           font-weight: 600;
           cursor: pointer;
+        }
+
+        .order-btn:hover {
+          background: #ec961c;
+          transition: 0.3s ease-in-out;
         }
   
         .food-pic {
@@ -494,6 +510,11 @@
           font-weight: 600;
           cursor: pointer;
         }
+
+        .order-btn:hover {
+          background: #ec961c;
+          transition: 0.3s ease-in-out;
+        }
   
         .food-pic {
           height: 13rem;
@@ -579,6 +600,11 @@
           color: white;
           font-weight: 600;
           cursor: pointer;
+        }
+
+        .order-btn:hover {
+          background: #ec961c;
+          transition: 0.3s ease-in-out;
         }
   
         .food-pic {
