@@ -82,15 +82,23 @@ function addRemoveCartItems() {
       });
       totalOrder.textContent = totalOrderPrice;
 
-      //   Remove order items from cart and update price total
+      //   Remove order items from cart and update price total (clear out/reset the prices array if total price is 0)
       const orderItems = document.querySelectorAll(".order-item");
       const removeOrderItem = document.querySelectorAll(".remove-btn");
       removeOrderItem.forEach((remove) => {
         remove.addEventListener("click", function (e) {
+          console.log(remove.parentElement);
           remove.parentElement.remove(remove.parentElement);
-          const removed =
-            remove.parentElement.children[1].children[0].textContent;
-          totalOrder.textContent = parseInt(totalOrder.textContent - removed);
+          count.textContent = ordersUl.children.length;
+          const removed = parseInt(
+            remove.parentElement.children[1].children[0].textContent
+          );
+          cartItems.pop();
+          totalOrderPrice = totalOrderPrice - removed;
+          totalOrder.textContent = totalOrderPrice;
+          if (totalOrderPrice === 0) {
+            cartPrices = [];
+          }
         });
       });
     });
