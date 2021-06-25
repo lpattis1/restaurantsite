@@ -51,26 +51,40 @@
 
           <div class="enter-details-page">
             <h3 class="details-title">Enter your details</h3>
-            <form class="details-form">
+            <div class="details-form">
               <div class="name-area">
                 <label for="details-name">Name</label>
-              <input type="text" class="details-name" placeholder="Your Name">
+              <input type="text" class="details-name details-input" name="fullname" placeholder="Your Name">
+              <p class="form-message">Please enter a valid name (first name and last).</p>
               </div>
 
              <div class="email-area">
-              <label for="details-email">Email Address</label>
-              <input type="email" class="details-email" placeholder="Your Email">
+              <label for="details-email">Email Address & Phone</label>
+              <input type="email" class="details-email details-input" name="email" placeholder="Your Email">
+              <p class="form-message">Email must be valid, e.g. me@mydomain.com.</p>
+              <input type="text" class="details-phone details-input" name="phone" placeholder="Your Phone Number">
+              <p class="form-message">Phone number must be a valid US telephone number (10 digits).</p>
              </div>
 
               <div class="payment-area">
                 <label for="details-payment">Payment</label>
-                <input type="number" class="details-payment-card" placeholder="Card Number">
-                <input type="number" class="details-payment-cvc" placeholder="CVC">
-                <input type="number" class="details-payment-zip" placeholder="Zipcode">
+                <input type="text" class="details-payment-card details-input" name="card" placeholder="Card Number">
+                <p class="form-message">Card number is invalid (must be 16 digits).</p>
+                <input type="text" class="details-payment-cvc details-input" name="cvc" placeholder="CVC">
+                <p class="form-message">Please enter a valid cvc code (3 digits).</p>
+                <input type="text" class="details-payment-zip details-input" name="zipcode" placeholder="Zipcode">
+                <p class="form-message">Please enter a valid zipcode (5 digits).</p>
               </div>
 
+              <div class="warnings">
+                <p class="warning-text">Please fill out the form. Do not leave any invalid or empty inputs.</p>
+              </div>
+
+              <div class="btn-area">
+                <button class="go-back">Go Back</button>
               <button class="checkout-btn">Complete Order</button>
-            </form>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -514,18 +528,18 @@
 
         <form action="" class="contact__form">
           <div class="name-area">
-            <label for="name">Your Name</label>
-            <input class="contact-name" type="text" placeholder="John Doe">
+            <label for="name">Your Full Name</label>
+            <input class="contact-name" type="text" name="fullname" placeholder="John Doe">
           </div>
 
           <div class="email-area">
             <label for="email">Email Address</label>
-            <input class="contact-email" type="email" placeholder="Johndoe@gmail.com">
+            <input class="contact-email" type="email" name="email" placeholder="Johndoe@gmail.com">
           </div>
 
           <div class="phone-area">
             <label for="phone">Phone Number</label>
-            <input class="contact-phone" type="text" placeholder="(555)-555-5555">
+            <input class="contact-phone" type="text" name="phone" placeholder="(555)-555-5555">
           </div>
 
           <div class="message-area">
@@ -538,6 +552,7 @@
 
     <script src="/app.js"></script>
     <script src="/cart.js"></script>
+    <script src="/forms.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         const scroll = new SmoothScroll('a[href*="#"]');

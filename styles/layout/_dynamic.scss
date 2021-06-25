@@ -45,11 +45,14 @@
 .slide-in {
   opacity: 1 !important;
   transform: translateX(0%) !important;
-  transition: 0.3s ease-in-out !important;
+  transition: 0.5s ease-in-out !important;
 }
 
 .slide-out {
+  transition: 0.5s ease-in-out !important;
   transform: translateX(-200%) !important;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .display {
@@ -64,10 +67,43 @@
   display: none !important;
 }
 
+// cart modal
+
 .show-modal {
   display: flex !important;
 }
 
 .show-alert {
+  display: block !important;
+}
+
+.modal-padding {
+  padding-bottom: 6rem !important;
+}
+
+.modal-height {
+  height: 70%;
+}
+
+
+// validation styles
+
+input.valid {
+  border: 0.3rem solid #38bc38;
+}
+
+input.invalid {
+  border: 0.3rem solid red;
+}
+
+input.invalid + .form-message {
+  display: block !important;
+}
+
+input.valid + .form-message {
+  display: none !important;
+}
+
+.show-warning {
   display: block !important;
 }

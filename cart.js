@@ -87,7 +87,6 @@ function addRemoveCartItems() {
       const removeOrderItem = document.querySelectorAll(".remove-btn");
       removeOrderItem.forEach((remove) => {
         remove.addEventListener("click", function (e) {
-          console.log(remove.parentElement);
           remove.parentElement.remove(remove.parentElement);
           count.textContent = ordersUl.children.length;
           const removed = parseInt(
@@ -107,13 +106,32 @@ function addRemoveCartItems() {
   //   Open cart modal
   cart.addEventListener("click", function (e) {
     const modalBg = document.querySelector(".cart-modal-bg");
+    const cartModal = document.querySelector(".cart-modal");
     modalBg.classList.add("show-modal");
+    cartModal.animate(
+      [
+        {
+          transform: "translateZ(-1400px)",
+          opacity: "0",
+        },
+        {
+          transform: "translateZ(0)",
+          opacity: "1",
+        },
+      ],
+      {
+        duration: 500,
+        fill: "forwards",
+      }
+    );
   });
 
   //   Close cart modal
   cartClose.addEventListener("click", function (e) {
     const modalBg = document.querySelector(".cart-modal-bg");
+    const amountAlert = document.querySelector(".amount-alert");
     modalBg.classList.remove("show-modal");
+    amountAlert.classList.remove("show-alert");
   });
 }
 
@@ -124,14 +142,33 @@ function checkout() {
   const checkoutBtn = document.querySelector(".to-details-btn");
 
   checkoutBtn.addEventListener("click", function (e) {
+    //   Cart modal
+    const cartModal = document.querySelector(".cart-modal");
+    const closeCartModal = document.querySelector(".cart-modal-close");
+
+    // First cart page
+    const summaryPage = document.querySelector(".summary");
+    // Payment details page variables
+    const paymentPage = document.querySelector(".enter-details-page");
+
+    //   If there are no items in the cart - show popup warning
     const totalOrder = document.querySelector(".total-number");
     const amountAlert = document.querySelector(".amount-alert");
-    console.log(totalOrder);
     let totalOrderPrice = parseFloat(totalOrder.textContent);
     if (totalOrderPrice <= 0) {
       amountAlert.classList.add("show-alert");
+      paymentPage.classList.remove("slide-in");
     } else {
       amountAlert.classList.remove("show-alert");
+      summaryPage.style.opacity = "0";
+      paymentPage.classList.add("slide-in");
+      cartModal.classList.add("modal-padding");
+      cartModal.classList.add("modal-height");
+    }
+
+    if (paymentPage.classList.contains("slide-in")) {
+      console.log(closeCartModal.children[0]);
+      closeCartModal.children[0].style.color = "black";
     }
   });
 }

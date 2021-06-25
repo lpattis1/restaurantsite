@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+*:focus {
+  outline: none;
+}
+
 #about {
   margin-top: 15rem;
 }
@@ -194,11 +198,14 @@ li {
 .slide-in {
   opacity: 1 !important;
   transform: translateX(0%) !important;
-  transition: 0.3s ease-in-out !important;
+  transition: 0.5s ease-in-out !important;
 }
 
 .slide-out {
+  transition: 0.5s ease-in-out !important;
   transform: translateX(-200%) !important;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .display {
@@ -215,6 +222,34 @@ li {
 }
 
 .show-alert {
+  display: block !important;
+}
+
+.modal-padding {
+  padding-bottom: 6rem !important;
+}
+
+.modal-height {
+  height: 70%;
+}
+
+input.valid {
+  border: 0.3rem solid #38bc38;
+}
+
+input.invalid {
+  border: 0.3rem solid red;
+}
+
+input.invalid + .form-message {
+  display: block !important;
+}
+
+input.valid + .form-message {
+  display: none !important;
+}
+
+.show-warning {
   display: block !important;
 }
 
@@ -990,6 +1025,16 @@ li {
   width: 100%;
   background: rgba(0, 0, 0, 0.13);
 }
+.cart-modal-bg .cart-modal .warnings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-modal-bg .cart-modal .warnings .warning-text {
+  font-size: 1.3rem;
+  color: red;
+  display: none;
+}
 .cart-modal-bg .cart-modal .enter-details-page {
   display: flex;
   flex-direction: column;
@@ -1003,6 +1048,12 @@ li {
   top: 0;
   right: 0;
   left: 0;
+}
+.cart-modal-bg .cart-modal .enter-details-page .form-message {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: red;
+  display: none;
 }
 .cart-modal-bg .cart-modal .enter-details-page .details-title {
   font-size: 2.5rem;
@@ -1038,6 +1089,11 @@ li {
   padding: 1.5rem;
   font-size: 1.6rem;
 }
+.cart-modal-bg .cart-modal .enter-details-page .details-form .email-area .details-phone {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
 .cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area {
   display: flex;
   flex-direction: column;
@@ -1050,29 +1106,54 @@ li {
 .cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area .details-payment-card {
   padding: 1.5rem;
   font-size: 1.6rem;
-  margin-bottom: 1rem;
 }
 .cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area .details-payment-cvc {
   padding: 1.5rem;
   font-size: 1.6rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .cart-modal-bg .cart-modal .enter-details-page .details-form .payment-area .details-payment-zip {
   padding: 1.5rem;
   font-size: 1.6rem;
+  margin-top: 1rem;
 }
-.cart-modal-bg .cart-modal .enter-details-page .details-form .checkout-btn {
-  padding: 2rem 4rem;
-  font-size: 2rem;
+.cart-modal-bg .cart-modal .enter-details-page .details-form .btn-area {
   display: flex;
   justify-content: center;
+  padding-top: 2rem;
   align-items: center;
   margin: auto;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .btn-area .go-back {
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #a6ce39;
+  color: white;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  align-self: center;
+  margin-right: 2rem;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .btn-area .checkout-btn {
+  padding: 2rem 2rem;
+  font-size: 2rem;
+  align-self: center;
   border: none;
   border-radius: 0.5rem;
   background: #f89b1c;
   color: white;
   margin-bottom: 3rem;
+  cursor: pointer;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .checkout-btn:hover {
+  background: #e28e18;
+  transition: 0.3s ease-in-out;
+}
+.cart-modal-bg .cart-modal .enter-details-page .details-form .go-back:hover {
+  background: #92b432;
+  transition: 0.3s ease-in-out;
 }
 
 .cart-modal-bg .cart-modal .order-complete-page {
