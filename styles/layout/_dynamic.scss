@@ -82,18 +82,22 @@
 }
 
 .modal-height {
-  height: 70%;
+  height: 62%;
+}
+
+.modal-height2 {
+  height: 72% !important;
 }
 
 
-// validation styles
+// validation and contact styles
 
 input.valid {
-  border: 0.3rem solid #38bc38;
+  border: 0.3rem solid #38bc38 !important;
 }
 
 input.invalid {
-  border: 0.3rem solid red;
+  border: 0.3rem solid red !important;
 }
 
 input.invalid + .form-message {
@@ -105,5 +109,9 @@ input.valid + .form-message {
 }
 
 .show-warning {
+  display: block !important;
+}
+
+.thank-you-show {
   display: block !important;
 }

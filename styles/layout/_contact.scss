@@ -46,4 +46,194 @@
       margin: auto;
     }
   }
+
+  .contact__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+
+    .thank-you-section {
+
+      display: none;
+
+      .thank-you-title {
+        font-size: 3rem;
+        font-weight: 500;
+        color: #a6ce39;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .thank-you-message {
+        font-size: 1.7rem;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 2rem;
+      }
+
+      .thank-you-socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 10rem;
+
+        .social {
+          font-size: 3rem;
+          margin-right: 2rem;
+          background: #f89b1c;
+          padding: 0.8rem 1.8rem;
+          border-radius: 0.5rem;
+          color: white;
+        }
+
+        .social:hover {
+          transition: 0.3s ease-in-out;
+          background: #e7931c;
+        }
+      }
+    }
+
+    .form-message {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      color: red;
+      display: none;
+    }
+
+    .contact-title {
+      font-size: 4rem;
+      color: #f89b1c;
+      text-decoration: underline;
+      text-decoration-color: #a6ce39;
+      text-underline-offset: 0.8rem;
+      margin-bottom: 4rem;
+    }
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+
+      .name-area {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        label {
+          font-size: 1.6rem;
+          color: #a6ce39;
+        }
+
+        .contact-name {
+          padding: 1.5rem;
+          width: 55rem;
+          font-size: 1.6rem;
+          border: none;
+          box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 10%);
+        }
+      }
+
+      .email-area {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 2rem;
+
+        label {
+          font-size: 1.6rem;
+          color: #a6ce39;
+        }
+
+        .contact-email {
+          padding: 1.5rem;
+          width: 55rem;
+          font-size: 1.6rem;
+          border: none;
+          box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 10%);
+        }
+      }
+
+      .phone-area {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 2rem;
+
+        label {
+          font-size: 1.6rem;
+          color: #a6ce39;
+        }
+
+        .contact-phone {
+          padding: 1.5rem;
+          width: 55rem;
+          font-size: 1.6rem;
+          border: none;
+          box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 10%);
+        }
+      }
+
+      .message-area {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 2rem;
+
+        label {
+          font-size: 1.6rem;
+          color: #a6ce39;
+        }
+
+        .contact-message {
+          padding: 1.5rem;
+          width: 55rem;
+          font-size: 1.6rem;
+          border: none;
+          box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 10%);
+        }
+      }
+
+      .warnings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        .warning-text {
+          font-size: 1.3rem;
+          color: red;
+          display: none;
+        }
+      }
+      .contact-btn {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 2rem;
+
+        .contact-submit {
+          padding: 1.8rem 5rem;
+          border: none;
+          background: #a6ce39;
+          border-radius: 0.5rem;
+          font-size: 1.8rem;
+          font-family: "Poppins", sans-serif;
+          color: white;
+          font-weight: 600;
+          cursor: pointer;
+          margin-bottom: 10rem;
+        }
+
+        .contact-submit:hover {
+          background: #97bb33;
+          transition: 0.3s ease-in;
+        }
+      }
+    }
+  }
 }

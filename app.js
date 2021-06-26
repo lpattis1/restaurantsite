@@ -13,6 +13,10 @@ const about = document.querySelector("#about");
 const menu = document.querySelector("#menu");
 const contact = document.querySelector("#contact");
 
+// Navbar (mobile)
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const mobileNavbar = document.querySelector(".navbar__links");
+
 // ----------------------------------
 
 // Intersection Observer

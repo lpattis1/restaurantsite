@@ -97,7 +97,7 @@
     </div>
 
     <!-- sub nav -->
-    <div class="top-bar ">
+    <div class="top-bar">
       <div class="top-bar__container">
         <div class="top-bar__address-phone">
           <p class="address">
@@ -526,33 +526,59 @@
       <div class="contact__section">
         <h2 class="contact-title">Connect With Us!</h2>
 
-        <form action="" class="contact__form">
+        <div class="thank-you-section">
+          <h2 class="thank-you-title">Thank you for your message <span class="user-name">, </span>! 😁</h2>
+          <p class="thank-you-message">We will get in touch with you shortly. Until then, feel free to check out our menu or our social media platforms!</p>
+          <ul class="thank-you-socials">
+            <li><a href="http://www.facebook.com" class="social"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="http://www.twitter.com" class="social"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="http://www.instagram.com" class="social"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+         </div>
+
+        <div class="contact__form">
+
+
           <div class="name-area">
             <label for="name">Your Full Name</label>
-            <input class="contact-name" type="text" name="fullname" placeholder="John Doe">
+            <input class="contact-name contact-input" type="text" name="fullname" placeholder="John Doe">
+            <p class="form-message">Please enter a valid name (first name and last).</p>
           </div>
 
           <div class="email-area">
             <label for="email">Email Address</label>
-            <input class="contact-email" type="email" name="email" placeholder="Johndoe@gmail.com">
+            <input class="contact-email contact-input" type="email" name="email" placeholder="Johndoe@gmail.com">
+            <p class="form-message">Email must be valid, e.g. me@mydomain.com.</p>
           </div>
 
           <div class="phone-area">
             <label for="phone">Phone Number</label>
-            <input class="contact-phone" type="text" name="phone" placeholder="(555)-555-5555">
+            <input class="contact-phone contact-input" type="text" name="phone" placeholder="(555)-555-5555">
+            <p class="form-message">Phone number must be a valid US telephone number (10 digits).</p>
           </div>
 
           <div class="message-area">
             <label for="message">Your Message</label>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="My Message..."></textarea>
+            <textarea name="message" class="contact-message contact-input" cols="30" rows="10" placeholder="My Message..."></textarea>
           </div>
-        </form>
+
+          <div class="warnings">
+            <p class="warning-text">Please fill out the form. Do not leave any invalid or empty inputs.</p>
+          </div>
+
+          <div class="contact-btn">
+            <button class="contact-submit">Submit</button>
+          </div>
+        </div>
       </div>
     </section>
+
+    
 
     <script src="/app.js"></script>
     <script src="/cart.js"></script>
     <script src="/forms.js"></script>
+    <script src="/mobile.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         const scroll = new SmoothScroll('a[href*="#"]');

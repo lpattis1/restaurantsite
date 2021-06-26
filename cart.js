@@ -132,6 +132,20 @@ function addRemoveCartItems() {
     const amountAlert = document.querySelector(".amount-alert");
     modalBg.classList.remove("show-modal");
     amountAlert.classList.remove("show-alert");
+    modalBg.animate(
+      [
+        {
+          opacity: "1",
+        },
+        {
+          opacity: "0",
+        },
+      ],
+      {
+        duration: 1000,
+        fill: "backwards",
+      }
+    );
   });
 }
 
