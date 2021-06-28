@@ -349,6 +349,18 @@
       width: 100%;
       transition: 0.3s ease-in-out;
       transform: translateX(200%);
+
+      .complete-title {
+        font-size: 4rem;
+        color: white;
+      }
+
+      .complete-message {
+        font-size: 1.7rem;
+        text-align: center;
+        width: 90%;
+        margin-top: 1.5rem;
+      }
     }
   }
 }

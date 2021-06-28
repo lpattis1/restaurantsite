@@ -4,6 +4,7 @@ const completeBtn = document.querySelector(".checkout-btn");
 const warningText = document.querySelector(".warning-text");
 const warningText2 = document.querySelector(".contact__form .warning-text");
 const paymentForm = document.querySelector(".details-form");
+const orderCompletePage = document.querySelector(".order-complete-page");
 
 // Contact Input Variables
 const contactInputs = document.querySelectorAll(".contact-input");
@@ -104,4 +105,24 @@ function submitMessage() {
   });
 }
 
+// Complete order - payment form
+function completeOrder() {
+  completeBtn.addEventListener("click", function (e) {
+    const paymentPage = document.querySelector(".enter-details-page");
+    for (let i = 0; i < paymentInputs.length; i++) {
+      if (
+        paymentInputs[i].value === "" ||
+        paymentInputs[i].classList.contains("invalid")
+      ) {
+        orderCompletePage.classList.remove("slide-in");
+        return;
+      } else {
+        paymentPage.classList.add(".slide-out");
+        orderCompletePage.classList.add("slide-in");
+      }
+    }
+  });
+}
+
 submitMessage();
+completeOrder();

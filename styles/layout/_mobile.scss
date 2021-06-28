@@ -1264,6 +1264,7 @@
               transition: 0.3s ease-in;
               height: 100%;
               overflow-y: auto !important;
+              overflow-x: hidden;
           
               .cart-modal-close {
                 position: absolute;

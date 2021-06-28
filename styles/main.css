@@ -2155,6 +2155,7 @@ body #menu .menu-categories .categories-container .categories .category-four {
     transition: 0.3s ease-in;
     height: 100%;
     overflow-y: auto !important;
+    overflow-x: hidden;
   }
   body .cart-modal-bg .cart-modal .cart-modal-close {
     position: absolute;
@@ -2747,6 +2748,16 @@ body #menu .menu-categories .categories-container .categories .category-four {
   width: 100%;
   transition: 0.3s ease-in-out;
   transform: translateX(200%);
+}
+.cart-modal-bg .cart-modal .order-complete-page .complete-title {
+  font-size: 4rem;
+  color: white;
+}
+.cart-modal-bg .cart-modal .order-complete-page .complete-message {
+  font-size: 1.7rem;
+  text-align: center;
+  width: 90%;
+  margin-top: 1.5rem;
 }
 
 .top-bar {
