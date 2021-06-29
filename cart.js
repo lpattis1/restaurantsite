@@ -184,6 +184,23 @@ function checkout() {
       console.log(closeCartModal.children[0]);
       closeCartModal.children[0].style.color = "black";
     }
+
+    // go back to previous order page from payment page
+    const goBackBtn = document.querySelector(".go-back");
+
+    goBackBtn.addEventListener("click", function (e) {
+      paymentPage.classList.add("slide-out2");
+      summaryPage.style.opacity = "1";
+      paymentPage.classList.add("slide-in");
+      paymentPage.classList.remove("modal-height");
+      paymentPage.classList.remove("modal-padding");
+    });
+
+    checkoutBtn.addEventListener("click", function (e) {
+      if (paymentPage.classList.contains("slide-out2")) {
+        paymentPage.classList.remove("slide-out2");
+      }
+    });
   });
 }
 
